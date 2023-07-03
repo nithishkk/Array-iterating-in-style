@@ -31,22 +31,49 @@ export default function App() {
   return (
     <div>
       <h1>Hello StackBlitz!</h1>
-      {/* {cells?.map((item)=>
-      return (
-         <>
-      <p style={{ backgroundColor: chipObject[item.value]}}>Start editing to see some magic happen :)</p>
-      </>
-      )
-      )}
-       */}
+      
 
-{cells?.map((item) => {
+{/* {cells?.map((item) => {
   return (
     <p style={{ backgroundColor: chipObject[item.value] ?  chipObject[item.value]:"Approval" }}>
-      Start editing to see some magic happen :)
+     <h4> Start editing to see some magic happen </h4>
     </p>
   );
-})}
+})} */}
+
+
+
+{/* {cells?.map((item) => {
+  return (
+    <p style={{ backgroundColor: chipObject[item.value] ? chipObject[item.value] : "Approval" }}>
+      <h4>
+        {item.value === "Pending" && "Content for Pending"}
+        {item.value === "Closed" && "Content for Closed"}
+        {item.value === "Approval" && "Content for Approval"}
+        {item.value === "Review" && "Content for Review"}
+        {item.value === "Active" && "Content for Active"}
+        {item.value === "In-Progress" && "Content for In-Progress"}
+        {item.value === "Open" && "Content for Open"}
+        {item.value === "Completed" && "Content for Completed"}
+      </h4>
+    </p>
+  );
+})} */}
+
+{cells?.map((item) => (
+  <p style={{ backgroundColor: chipObject[item.value] || "Approval" }}>
+    <h4>
+      {item.value === "Pending" && "Content for Pending"}
+      {item.value === "Closed" && "Content for Closed"}
+      {item.value === "Approval" && "Content for Approval"}
+      {item.value === "Review" && "Content for Review"}
+      {item.value === "Active" && "Content for Active"}
+      {item.value === "In-Progress" && "Content for In-Progress"}
+      {item.value === "Open" && "Content for Open"}
+      {item.value === "Completed" && "Content for Completed"}
+    </h4>
+  </p>
+))}
 
       <button onClick={handleClick} style={{backgroundColor: data ?"red":"yellow"  }}>{data ? "logging" : "sonu"}</button>
     </div>
