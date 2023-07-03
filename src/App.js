@@ -48,7 +48,7 @@ export default function App() {
   );
 })}
 
-      <button onClick={handleClick}>{data ? "logging" : "sonu"}</button>
+      <button onClick={handleClick} style={{backgroundColor: data ?"red":"yellow"  }}>{data ? "logging" : "sonu"}</button>
     </div>
   );
 }
