@@ -24,7 +24,7 @@ export default function App() {
   const [data, setData] = useState(false);
 
   const handleClick = () => {
-    console.log(nithish[0].name); // Accessing the name property of the first element in the nithish array
+    // console.log(nithish[0].name); // Accessing the name property of the first element in the nithish array
     setData(true);
   };
 
@@ -42,13 +42,13 @@ export default function App() {
 
 {cells?.map((item) => {
   return (
-    <p style={{ backgroundColor: chipObject[item.value] }}>
+    <p style={{ backgroundColor: chipObject[item.value] ?  chipObject[item.value]:"Approval" }}>
       Start editing to see some magic happen :)
     </p>
   );
 })}
 
-      <button onClick={handleClick}>{data ? "logging..........." : "sonu"}</button>
+      <button onClick={handleClick}>{data ? "logging" : "sonu"}</button>
     </div>
   );
 }
